@@ -1,0 +1,207 @@
+@import "./colours";
+@import "./rem-calc";
+
+.quiz {
+    text-align: center;
+    
+    * {
+        color: $white;
+    }
+
+    .start-quiz {
+        margin-bottom: rem-calc(100);
+        width: rem-calc(220);
+        align-items: center;
+        justify-content: center;
+    }
+
+    button.btn-block {
+        color: $blueRoche;
+        border-radius: 5px;
+        &:hover, &:focus {
+            color: $blueRoche;
+        }
+        i {
+            color: $blueRoche;
+        }
+    }
+    h2 {
+        font-size: 23px;
+        font-weight: 400;
+        margin-bottom: rem-calc(40);
+        span {
+            font-weight: 700;
+        }
+        .yellow {
+            color: $yellow;
+        }
+    }
+    h3 {
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: rem-calc(30);
+        padding-bottom: rem-calc(30);
+        &.heading-underline {
+            &::after {
+                width: rem-calc(40);
+                border-color: $yellow;
+                left: 50%;
+                margin-left: - rem-calc(20);
+            }
+        }
+    }
+
+    .question {
+        font-weight: 600;
+        margin-bottom: rem-calc(60);   
+    }
+
+    #answers {
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                font-size: 19px;
+                background: $blueRoche;
+                border: 1px solid $greyLight;
+                padding: rem-calc(15) rem-calc(10);
+                border-radius: 5px;
+                font-weight: 600;
+                + li {
+                    margin-top: rem-calc(10);
+                }
+                span {
+                    color: $yellow;
+                }
+            }
+            span {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .response {
+        background: rgba($white, 0.75);
+        border: 1px solid $greyLight;
+        border-radius: 5px;
+        padding: rem-calc(30) rem-calc(15);
+        * {
+            font-weight: 600;
+        }
+        h3 {
+            padding-bottom: 0;
+        }
+        p {
+            color: $blueDark;
+        }
+        .Wrong, .wrong {
+            color: $red;
+            font-size: 23px;
+        }
+        .Correct, .correct {
+            color: $green;
+            font-size: 23px;
+        }
+
+        &.quiz-finished {
+            strong {
+                color: $blueDark;
+            }
+            h3, h4 {
+                font-size: 23px;
+                color: $blueDark;
+            }
+            h4 {
+                font-weight: 400;
+                color: tint($blueDark, 25%);
+                margin-bottom: rem-calc(30);
+            }
+            p {
+                margin-bottom: rem-calc(30);
+                font-weight: 400;
+            }
+        }
+        .copy-link {
+            span {
+                color: $blueDark;
+                font-weight: 400;
+            }
+        }
+    }
+
+    #skip-btn {
+        cursor: pointer;
+        margin-top: rem-calc(60);
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+}
+
+.quiz-share {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    li {
+        + li {
+            margin-top: rem-calc(10);
+        }
+        &.copy-link {
+            button {
+                border-radius: 5px;
+                background: $white;
+                display: flex;
+                align-items: center;
+                padding: rem-calc(10) rem-calc(20);
+                width: rem-calc(150);
+                color: $blueDark;
+                font-weight: 600;
+                opacity: 0.9;
+                cursor: pointer;
+                i {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $blueDark;
+                    width: rem-calc(31);
+                    height: rem-calc(31);
+                }
+            }
+            span {
+                color: $white;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .SocialMediaShareButton {
+        border-radius: 5px;
+        background: $white;
+        display: flex;
+        align-items: center;
+        padding: rem-calc(10) rem-calc(20);
+        width: rem-calc(150);
+        cursor: pointer;
+        &::after {
+            content: 'SHARE';
+            font-weight: 600;
+        }
+        circle {
+            fill: transparent;
+        }
+        &.SocialMediaShareButton--twitter {
+            background: #44C7F4;
+            opacity: 0.9;
+            &::after {
+                content: 'TWEET';
+            }
+        }
+        &.SocialMediaShareButton--facebook {
+            background: #073A6D;
+            opacity: 0.9;
+        }
+    }
+}
