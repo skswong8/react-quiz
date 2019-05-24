@@ -67,7 +67,7 @@ class App extends React.Component{
                 displayAnswer: 'none',
                 displayAnswerList: 'none',
                 quizFinished: true,
-                shareMessage: 'I just scored '+ (score) +' out of '+ (total) +' on the #MSaware quiz. See how much you know about Multiple Sclerosis for #worldMSday #MyInvisibleMS'
+                shareMessage: 'I just scored '+ (score) +' out of '+ (total) +' on the #MSaware quiz. See how much you know about Multiple Sclerosis for #WorldMSday #MyInvisibleMS'
             });
         } else {
             this.pushData(no);
