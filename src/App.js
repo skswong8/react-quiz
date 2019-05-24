@@ -25,7 +25,7 @@ class App extends React.Component{
             correctWrong: 'Wrong',
             quizFinished: false,
             shareMessage: 'How much do you know about #MS? Take the quiz to find out how #MSaware you are. #WorldMSDay #MyInvisibleMS',
-            url: 'https://msaware.roche.ie'
+            url: 'https://msaware.roche.ie/#do-you-know'
         }
         this.nextQuestion = this.nextQuestion.bind(this);
         this.handleAnswer = this.handleAnswer.bind(this);
