@@ -13,7 +13,7 @@ class App extends React.Component{
         super(props);
         this.state = {
             title: "DO YOU KNOW MULTIPLE SCLEROSIS?",
-            question: "Take the quiz to find out how #MSaware you are",
+            question: "How #MSaware are you? Could you recognise the symptoms?  Take our short quiz to find out.",
             no: -1,
             total: data.length,
             questionAnswered: false, 
@@ -24,7 +24,7 @@ class App extends React.Component{
             displayAnswer: 'none',
             correctWrong: 'Wrong',
             quizFinished: false,
-            shareMessage: 'Take the quiz to find out how #MSaware you are',
+            shareMessage: 'How much do you know about #MS? Take the quiz to find out how #MSaware you are. #WorldMSDay #MyInvisibleMS',
             url: 'https://msaware.roche.ie'
         }
         this.nextQuestion = this.nextQuestion.bind(this);
@@ -196,7 +196,8 @@ class App extends React.Component{
                     { quizFinished == true
                         ?
                         <div className="response quiz-finished">
-                            <h3>You scored</h3>
+                            <h3>Thank you for taking part in our quiz.</h3>
+                            <h4>You scored</h4>
                             <h4><strong>{score}</strong> out of <strong>{total} :)</strong></h4>
                             <p>Help raise awareness and share your results.
                                 <br></br>
